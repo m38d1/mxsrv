@@ -4085,8 +4085,8 @@ var SignJWT = class extends ProduceJWT {
 };
 
 // src/worker.js
-var userID = "89b3cbba-e6ac-485a-9481-976a0415eab9";
-var trojanPassword = `bpb-trojan`;
+var userID = "8899c602-e969-45ff-9be8-e6aad3b045eb";
+var trojanPassword = `mxsrv`;
 var proxyIPs = ["bpb.yousef.isegaro.com"];
 var defaultHttpPorts = ["80", "8080", "2052", "2082", "2086", "2095", "8880"];
 var defaultHttpsPorts = ["443", "8443", "2053", "2083", "2087", "2096"];
@@ -4928,7 +4928,7 @@ function generateRemark(index, port, address, cleanIPs, protocol, configType) {
   let addressType;
   const type = configType ? ` ${configType}` : "";
   cleanIPs.includes(address) ? addressType = "Clean IP" : addressType = isDomain(address) ? "Domain" : isIPv4(address) ? "IPv4" : isIPv6(address) ? "IPv6" : "";
-  return `\u{1F4A6} ${index} - ${protocol}${type} - ${addressType} : ${port}`;
+  return `${index} - ${protocol}${type} - ${addressType} : ${port}`;
 }
 function isDomain(address) {
   const domainPattern = /^(?!\-)(?:[A-Za-z0-9\-]{1,63}\.?)+[A-Za-z]{2,}$/;
