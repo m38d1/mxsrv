@@ -4,11 +4,11 @@ let userID, dohURL, proxyIP, trojanPassword, defaultHttpPorts, defaultHttpsPorts
 
 function initParams(request, env) {
     const proxyIPs = env.PROXYIP?.split(',').map(proxyIP => proxyIP.trim());
-    userID = env.UUID || '89b3cbba-e6ac-485a-9481-976a0415eab9';
+    userID = env.UUID || 'c2220262-26d1-43dd-84bf-04ddfab556c0';
     if (!isValidUUID(userID)) throw new Error(`Invalid UUID: ${userID}`);
     dohURL = env.DOH_URL || 'https://cloudflare-dns.com/dns-query';
     proxyIP = proxyIPs ? proxyIPs[Math.floor(Math.random() * proxyIPs.length)] : defaultProxyIP;
-    trojanPassword = env.TROJAN_PASS || 'bpb-trojan';
+    trojanPassword = env.TROJAN_PASS || 'm38d1';
     defaultHttpPorts = ['80', '8080', '2052', '2082', '2086', '2095', '8880'];
     defaultHttpsPorts = ['443', '8443', '2053', '2083', '2087', '2096'];
     panelVersion = '2.7.5';
